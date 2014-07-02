@@ -38,6 +38,11 @@ public class MainController {
 		return "index";
 	}
 	
+	@RequestMapping(value = "/info_service", method = RequestMethod.GET)
+	public String info_service(Locale locale, Model model) {
+		return "info_service";
+	}
+	
 	
 	@RequestMapping(value = "/404", method = RequestMethod.GET)
 	public String error(Locale locale, Model model) {
