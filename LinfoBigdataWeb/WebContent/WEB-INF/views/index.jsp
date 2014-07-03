@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Logistics Information Lab.</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.css"/>" rel="stylesheet">
@@ -21,34 +21,8 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                <a class="navbar-brand" href="${pageContext.request.contextPath}">Logistics Information Lab.</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="about">우리는...</a>
-                    </li>
-                    <li><a href="services">서비스 소개</a>
-                    </li>
-                    <li><a href="">연락처</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <jsp:include page="nav_bar.jsp"></jsp:include>
+    
 
     <div id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -95,7 +69,11 @@
     <div class="section">
 
         <div class="container">
-			<a class="btn btn-lg btn-primary center-block" href="info_service">다양한 자료를 확인해 보세요!</a>
+        	<div class="row">
+				<div style="text-align: center;">
+					<a class="btn btn-lg btn-primary" href="berth_info_graph">다양한 자료를 확인해 보세요!</a>
+				</div>
+			</div>
 	    </div>
 	    <!-- /.container -->
 

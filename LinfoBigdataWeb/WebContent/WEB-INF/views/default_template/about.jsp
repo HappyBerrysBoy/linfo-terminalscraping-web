@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Logistics Information Lab.</title>
+    <title>About - Modern Business - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.css"/>" rel="stylesheet">
@@ -21,7 +21,74 @@
 
 <body>
 
-    <jsp:include page="nav_bar.jsp"></jsp:include>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="${pageContext.request.contextPath}">Modern Business</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="about">About</a>
+                    </li>
+                    <li><a href="services">Services</a>
+                    </li>
+                    <li><a href="contact.php">Contact</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portfolio-1-col">1 Column Portfolio</a>
+                            </li>
+                            <li><a href="portfolio-2-col">2 Column Portfolio</a>
+                            </li>
+                            <li><a href="portfolio-3-col">3 Column Portfolio</a>
+                            </li>
+                            <li><a href="portfolio-4-col">4 Column Portfolio</a>
+                            </li>
+                            <li><a href="portfolio-item">Single Portfolio Item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog-home-1">Blog Home 1</a>
+                            </li>
+                            <li><a href="blog-home-2">Blog Home 2</a>
+                            </li>
+                            <li><a href="blog-post">Blog Post</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="full-width">Full Width Page</a>
+                            </li>
+                            <li><a href="sidebar">Sidebar Page</a>
+                            </li>
+                            <li><a href="faq">FAQ</a>
+                            </li>
+                            <li><a href="404">404</a>
+                            </li>
+                            <li><a href="pricing">Pricing Table</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
     <div class="container">
 

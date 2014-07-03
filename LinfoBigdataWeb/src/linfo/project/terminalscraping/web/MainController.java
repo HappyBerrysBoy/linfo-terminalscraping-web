@@ -33,26 +33,11 @@ public class MainController {
 //	}
 	
 	
+	
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
 		return "index";
-	}
-	
-	@RequestMapping(value = "/info_service", method = RequestMethod.GET)
-	public String info_service(Locale locale, Model model) {
-		return "info_service";
-	}
-	
-	
-	@RequestMapping(value = "/404", method = RequestMethod.GET)
-	public String error(Locale locale, Model model) {
-		return "404";
-	}
-	
-	
-	@RequestMapping(value = "/services", method = RequestMethod.GET)
-	public String services(Locale locale, Model model) {
-		return "services";
 	}
 	
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
@@ -60,64 +45,95 @@ public class MainController {
 		return "about";
 	}
 	
-	@RequestMapping(value = "/blog-home-1", method = RequestMethod.GET)
-	public String blog_home_1(Locale locale, Model model) {
-		return "blog-home-1";
+	
+	
+	@RequestMapping(value = "/berth_info_graph", method = RequestMethod.GET)
+	public String berth_info_graph(Locale locale, Model model) {
+		return "berth_info_graph";
 	}
 	
-	@RequestMapping(value = "/blog-home-2", method = RequestMethod.GET)
-	public String blog_home_2(Locale locale, Model model) {
-		return "blog-home-2";
-	}	
-	
-	@RequestMapping(value = "/blog-post", method = RequestMethod.GET)
-	public String blog_post(Locale locale, Model model) {
-		return "blog-post";
+	@RequestMapping(value = "/berth_info_table", method = RequestMethod.GET)
+	public String berth_info_table(Locale locale, Model model) {
+		return "berth_info_table";
 	}
 	
-	@RequestMapping(value = "/faq", method = RequestMethod.GET)
-	public String faq(Locale locale, Model model) {
-		return "faq";
-	}
 	
-	@RequestMapping(value = "/full-width", method = RequestMethod.GET)
-	public String full_width(Locale locale, Model model) {
-		return "full-width";
-	}
 	
-	@RequestMapping(value = "/portfolio-1-col", method = RequestMethod.GET)
-	public String portfolio_1_col(Locale locale, Model model) {
-		return "portfolio-1-col";
-	}
-	
-	@RequestMapping(value = "/portfolio-2-col", method = RequestMethod.GET)
-	public String portfolio_2_col(Locale locale, Model model) {
-		return "portfolio-2-col";
-	}
-	
-	@RequestMapping(value = "/portfolio-3-col", method = RequestMethod.GET)
-	public String portfolio_3_col(Locale locale, Model model) {
-		return "portfolio-3-col";
-	}
-	
-	@RequestMapping(value = "/portfolio-4-col", method = RequestMethod.GET)
-	public String portfolio_4_col(Locale locale, Model model) {
-		return "portfolio-4-col";
-	}
-	
-	@RequestMapping(value = "/portfolio-item", method = RequestMethod.GET)
-	public String portfolio_item(Locale locale, Model model) {
-		return "portfolio-item";
-	}
-	
-	@RequestMapping(value = "/pricing", method = RequestMethod.GET)
-	public String pricing(Locale locale, Model model) {
-		return "pricing";
-	}
-	
-	@RequestMapping(value = "/sidebar", method = RequestMethod.GET)
-	public String sidebar(Locale locale, Model model) {
-//		return "sidebar";
-		return "simple-sidebar";
-	}
+//	
+//	@RequestMapping(value = "/404", method = RequestMethod.GET)
+//	public String error(Locale locale, Model model) {
+//		return "404";
+//	}
+//	
+//	
+//	@RequestMapping(value = "/services", method = RequestMethod.GET)
+//	public String services(Locale locale, Model model) {
+//		return "services";
+//	}
+//	
+//	@RequestMapping(value = "/about", method = RequestMethod.GET)
+//	public String about(Locale locale, Model model) {
+//		return "about";
+//	}
+//	
+//	@RequestMapping(value = "/blog-home-1", method = RequestMethod.GET)
+//	public String blog_home_1(Locale locale, Model model) {
+//		return "blog-home-1";
+//	}
+//	
+//	@RequestMapping(value = "/blog-home-2", method = RequestMethod.GET)
+//	public String blog_home_2(Locale locale, Model model) {
+//		return "blog-home-2";
+//	}	
+//	
+//	@RequestMapping(value = "/blog-post", method = RequestMethod.GET)
+//	public String blog_post(Locale locale, Model model) {
+//		return "blog-post";
+//	}
+//	
+//	@RequestMapping(value = "/faq", method = RequestMethod.GET)
+//	public String faq(Locale locale, Model model) {
+//		return "faq";
+//	}
+//	
+//	@RequestMapping(value = "/full-width", method = RequestMethod.GET)
+//	public String full_width(Locale locale, Model model) {
+//		return "full-width";
+//	}
+//	
+//	@RequestMapping(value = "/portfolio-1-col", method = RequestMethod.GET)
+//	public String portfolio_1_col(Locale locale, Model model) {
+//		return "portfolio-1-col";
+//	}
+//	
+//	@RequestMapping(value = "/portfolio-2-col", method = RequestMethod.GET)
+//	public String portfolio_2_col(Locale locale, Model model) {
+//		return "portfolio-2-col";
+//	}
+//	
+//	@RequestMapping(value = "/portfolio-3-col", method = RequestMethod.GET)
+//	public String portfolio_3_col(Locale locale, Model model) {
+//		return "portfolio-3-col";
+//	}
+//	
+//	@RequestMapping(value = "/portfolio-4-col", method = RequestMethod.GET)
+//	public String portfolio_4_col(Locale locale, Model model) {
+//		return "portfolio-4-col";
+//	}
+//	
+//	@RequestMapping(value = "/portfolio-item", method = RequestMethod.GET)
+//	public String portfolio_item(Locale locale, Model model) {
+//		return "portfolio-item";
+//	}
+//	
+//	@RequestMapping(value = "/pricing", method = RequestMethod.GET)
+//	public String pricing(Locale locale, Model model) {
+//		return "pricing";
+//	}
+//	
+//	@RequestMapping(value = "/sidebar", method = RequestMethod.GET)
+//	public String sidebar(Locale locale, Model model) {
+////		return "sidebar";
+//		return "simple-sidebar";
+//	}
 }
