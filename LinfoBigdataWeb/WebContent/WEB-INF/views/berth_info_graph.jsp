@@ -18,6 +18,7 @@
     <link href="<c:url value="/resources/css/modern-business.css"/>" rel="stylesheet">
     <link href="<c:url value="/resources/font-awesome/css/font-awesome.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/resources/css/simple-sidebar.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/css/vis.css"/>" rel="stylesheet">
 
 
 </head>
@@ -46,31 +47,18 @@
                     <div class="col-md-12">
                         <p class="lead">This simple sidebar template has a hint of JavaScript to make the template responsive. It also includes Font Awesome icon fonts.</p>
                     </div>
-                    <div class="col-md-6">
-                        <p class="well">The template still uses the default Bootstrap rows and columns.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="well">But the full-width layout means that you wont be using containers.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="well">Three Column Example</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="well">Three Column Example</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="well">You get the idea! Do whatever you want in the page content area!</p>
-                    </div>
                 </div>
+                <div class="row" id="visualization"></div>
             </div>
         </div>
-
     </div>
+    
 
     <!-- JavaScript -->
     <script src="<c:url value="/resources/js/jquery-1.10.2.js"/>"></script>
     <script src="<c:url value="/resources/js/bootstrap.js"/>"></script>
     <script src="<c:url value="/resources/js/modern-business.js"/>"></script>
+    <script src="<c:url value="/resources/js/vis.js"/>"></script>
 
     <!-- Custom JavaScript for the Menu Toggle -->
     <script>
@@ -78,6 +66,60 @@
         e.preventDefault();
         $("#wrapper").toggleClass("active");
     });
+    
+   
+    $.ajax({
+    	type: "POST",
+    	url: "http://hnctech73.iptime.org:9000/berthJson",
+    	data: { name: "John", location: "Boston" },
+    	dataType: "json",
+    })
+	    .done(function( msg ) {
+	    	alert( "Data Saved: " + msg );
+		})
+		.fail(function(request,status,error) {
+			alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+		});
+    
+    
+    
+    
+    var groups = new vis.DataSet([
+      {id: 0, content: 'First', value: 1},
+      {id: 1, content: 'Third', value: 3},
+      {id: 2, content: 'Second', value: 2}
+    ]);
+
+    // create a dataset with items
+    // note that months are zero-based in the JavaScript Date object, so month 3 is April
+    var items = new vis.DataSet([
+      {id: 0, group: 0, content: 'item 0', start: new Date(2014, 3, 17), end: new Date(2014, 3, 21)},
+      {id: 1, group: 0, content: 'item 1', start: new Date(2014, 3, 19), end: new Date(2014, 3, 20)},
+      {id: 2, group: 1, content: 'item 2', start: new Date(2014, 3, 16), end: new Date(2014, 3, 24)},
+      {id: 3, group: 1, content: 'item 3', start: new Date(2014, 3, 23), end: new Date(2014, 3, 24)},
+      {id: 4, group: 1, content: 'item 4', start: new Date(2014, 3, 22), end: new Date(2014, 3, 26)},
+      {id: 5, group: 2, content: 'item 5', start: new Date(2014, 3, 24), end: new Date(2014, 3, 27)}
+    ]);
+
+    // create visualization
+    var container = document.getElementById('visualization');
+    var options = {
+      // option groupOrder can be a property name or a sort function
+      // the sort function must compare two groups and return a value
+      //     > 0 when a > b
+      //     < 0 when a < b
+      //       0 when a == b
+      groupOrder: function (a, b) {
+        return a.value - b.value;
+      },
+      //editable: true
+    };
+
+    var timeline = new vis.Timeline(container);
+    timeline.setOptions(options);
+    timeline.setGroups(groups);
+    timeline.setItems(items);
+  
     </script>
 </body>
 
